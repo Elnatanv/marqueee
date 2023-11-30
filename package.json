@@ -1,6 +1,6 @@
 {
   "name": "marqueee",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Marquee library.",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/Elnatanv/marqueee/issues"
   },
-  "homepage": "https://github.com/Elnatanv/marqueee#readme"
+  "homepage": "https://github.com/Elnatanv/marqueee#readme",
+  "files": [
+    "carthagosSlider.js",
+    "carthagosSlider.d.ts",
+    "style.css" 
+  ]
 }
