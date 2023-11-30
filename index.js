@@ -28,7 +28,7 @@ export const initCarthagosSlider = (id, options = {}) => {
 
     console.log("widtg", width);
     // swiper width and check how many can fit inside
-    let delta = Math.ceil(swiper.clientWidth / width);
+    let delta = Math.ceil(swiper.clientWidth / width) * 2;
     if (delta < 1) {
       delta = 1;
     }
