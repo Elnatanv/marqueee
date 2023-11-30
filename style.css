@@ -1,0 +1,5 @@
+.slider-wrapper:hover {
+    animation-play-state: paused;
+    display: flex;
+  }
+  
