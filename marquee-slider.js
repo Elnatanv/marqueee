@@ -41,6 +41,7 @@ const initMarqueeeSlider = (id, options = {}) => {
     swiperSlidesWrapper[0].style.margin = `0 ${spaceBetween.value / 2}${
       spaceBetween.prefix
     }`;
+    swiperSlidesWrapper[0].style.minWidth = `${swiperSlidesWrapper[0].clientWidth}px`;
   };
 
   const clonedWrapper = swiperWrapperInit.cloneNode(true);
@@ -68,7 +69,7 @@ const initMarqueeeSlider = (id, options = {}) => {
 
     let swipersLength = swiperSlidesWrapper.length;
 
-    for (let i = 0; i <= delta + 1; i++) {
+    for (let i = 0; i <= delta; i++) {
       for (let j = 0; j < swipersLength; j++) {
         const elm = swiperSlidesWrapper[j];
 
