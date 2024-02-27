@@ -1,21 +1,19 @@
-// index.d.ts
-
-declare module "marqueeeSlider" {
-  interface MarqueeeSliderOptions {
+declare module "MarqueeSlider" {
+  interface MarqueeSliderOptions {
     stopOnHover?: boolean;
     // Add more options and their types as needed
   }
 
-  interface MarqueeeSliderInstance {
+  interface MarqueeSliderInstance {
     // Define any functions or properties you might expose from your library
     // Example:
     // someFunction(): void;
   }
 
-  function initMarqueeeSlider(
+  function initMarqueeSlider(
     id: string,
-    options?: MarqueeeSliderOptions
-  ): MarqueeeSliderInstance;
+    options?: MarqueeSliderOptions
+  ): MarqueeSliderInstance;
 
-  export = marqueeeSlider;
+  export = initMarqueeSlider;
 }
