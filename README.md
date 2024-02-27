@@ -44,6 +44,8 @@ First, you need to create the HTML structure for your marquee slider. Here's an 
 </div>
 ```
 
+Important:
+
 - The `id` attribute must be set for the top parent `div`.
 - Two additional attributes are required: `data-speed` and `data-space`.
   - `data-speed`: Time taken for the animation to complete.
@@ -53,7 +55,7 @@ First, you need to create the HTML structure for your marquee slider. Here's an 
 
 In addition you need to add the style:
 
-JSX :
+React :
 
 ```
 import "marqueee/style.css"
@@ -69,8 +71,20 @@ HTML:
 
 Once you have set up the HTML structure, you can initialize the marquee slider using the `initMarqueeSlider` function. Here's an example:
 
+Vanilla JS:
+
 ```
-initMarqueeSlider("marquee-slider", {stopOnHover: false});
+<script>
+    initMarqueeSlider("marquee-slider", {stopOnHover: false});
+</script>
+```
+
+React:
+
+```
+useEffect(()=>{
+    initMarqueeSlider("marquee-slider", {stopOnHover: false})
+},[])
 ```
 
 The `initMarqueeSlider` function takes two arguments:
