@@ -18,7 +18,7 @@ const { initMarqueeeSlider } from 'marqueee'
 
 OR to use it as vanilla js:
 
-You need to include the JavaScript file in your project.
+You need to include the JavaScript file in your project. you can get the file [from here](https://raw.githubusercontent.com/Elnatanv/marqueee/main/marquee-slider.js)
 
 ```
 <script src="marquee-slider.js"></script>
@@ -95,7 +95,7 @@ The `initMarqueeSlider` function takes two arguments:
    | Option | Default | Description |
    |-----------------|---------|------------------------------------------------------------------------|
    | stopOnHover | true | Allows/prevents the user to pause the marquee on mouse hover. |
-   | allowPointEvent| true | Allows/prevents the user to have point events on marquee. Will overwrite stopOnHover option! |
-   | dir | left | Allows the user to change the marquee animation direction. 'left' | 'right' |
+   | allowPointEvent| true | Allows/prevents the user to have pointer events on marquee. Will overwrite stopOnHover option! |
+   | dir | left | Allows the user to change the marquee animation direction. 'left' or 'right' |
 
 That's it! You've successfully implemented the Marquee Slider Library on your website.
