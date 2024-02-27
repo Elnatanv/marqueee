@@ -11,8 +11,10 @@
   }
   .marquee-slider-slides-wrapper{
     display: flex;
+    
     overflow: hidden;
     position: relative;
    width: fit-content;
    justify-content: space-between;
   }
+ 
