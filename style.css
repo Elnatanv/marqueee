@@ -8,6 +8,9 @@
   .marquee-slider-slides-wrapper{
     display: flex;
     position: relative;
-   
+    
   }
   
+.marquee-slider-slide{
+  width: fit-content;
+}

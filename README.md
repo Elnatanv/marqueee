@@ -18,7 +18,7 @@ const { initMarqueeeSlider } from 'marqueee'
 
 OR to use it as vanilla js:
 
-You need to include the JavaScript file in your project. You can download it from [here](example.com/marquee-slider.js) and include it in your HTML file like this:
+You need to include the JavaScript file in your project.
 
 ```
 <script src="marquee-slider.js"></script>
@@ -29,6 +29,7 @@ You need to include the JavaScript file in your project. You can download it fro
 ### HTML Structure
 
 First, you need to create the HTML structure for your marquee slider. Here's an example:
+
 (If using in JSX - change class to className)
 
 ```
@@ -71,25 +72,28 @@ HTML:
 
 Once you have set up the HTML structure, you can initialize the marquee slider using the `initMarqueeSlider` function. Here's an example:
 
-Vanilla JS:
-
-```
-<script>
-    initMarqueeSlider("marquee-slider", {stopOnHover: false});
-</script>
-```
-
 React:
 
 ```
 useEffect(()=>{
-    initMarqueeSlider("marquee-slider", {stopOnHover: false})
+    initMarqueeSlider("marquee-slider", {stopOnHover:true, dir:'left', allowPointEvent:true})
 },[])
+```
+
+Vanilla JS:
+
+```
+<script>
+    initMarqueeSlider("marquee-slider", {stopOnHover:true, dir:'left', allowPointEvent:true});
+</script>
 ```
 
 The `initMarqueeSlider` function takes two arguments:
 
 1. The `id` of the top parent div.
-2. An options object. By default, the only option available is `stopOnHover`, which determines whether the marquee animation stops on hover. If not specified, it defaults to `false`.
+2. An options object:
+   - stopOnHover: boolen (default true) - will allow/prevent the user to pause the marquee on mouse hover
+   - allowPointEvent: boolean (default true) - will allow/prevent the user to have point events on marquee. Will overwrite stopOnHover option!
+   - dir: string (default left) - will allow the user to change the marquee animation direction. 'left' | 'right'
 
 That's it! You've successfully implemented the Marquee Slider Library on your website.

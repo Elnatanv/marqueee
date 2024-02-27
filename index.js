@@ -27,7 +27,18 @@ export const initMarqueeeSlider = (id, options = {}) => {
     "marquee-slider-slides-wrapper"
   );
 
-  const { stopOnHover = false } = options;
+  const { stopOnHover = false, dir = "left", allowPointEvent = true } = options;
+
+  if (dir === "right") {
+    swiper.setAttribute("dir", "rtl");
+  }
+  if (dir === "left") {
+    swiper.setAttribute("dir", "ltr");
+  }
+
+  if (!allowPointEvent) {
+    swiper.style.pointerEvents = "none";
+  }
 
   const speed = parseFloat(swiper.getAttribute("data-speed"));
 
@@ -41,40 +52,47 @@ export const initMarqueeeSlider = (id, options = {}) => {
     swiperSlidesWrapper[0].style.margin = `0 ${spaceBetween.value / 2}${
       spaceBetween.prefix
     }`;
+    swiperSlidesWrapper[0].style.minWidth = `${swiperSlidesWrapper[0].offsetWidth}px`;
   };
 
   const clonedWrapper = swiperWrapperInit.cloneNode(true);
   const init = (swiperWrapper) => {
-    const width = swiperSlidesWrapper[0].clientWidth;
+    const width = swiperSlidesWrapper[0].offsetWidth;
 
     // Define keyframes for the animation
     const keyframes = `
-     @keyframes ${id} {
-       0% {
-         transform: translateX(0);
-       }
-       100% {
-         transform: translateX(-${width + space}px);
-       }
-     }
-     
-   `;
+         @keyframes ${id} {
+           0% {
+             transform: translateX(0);
+           }
+           100% {
+             transform: translateX(${dir === "left" ? "-" : "+"}${
+      width + space
+    }px);
+           }
+         }
+         
+       `;
 
     // swiper width and check how many can fit inside
-    let delta = Math.ceil(swiper.clientWidth / width);
+    let delta = Math.ceil(swiper.offsetWidth / width);
     if (delta < 1) {
       delta = 1;
     }
 
     let swipersLength = swiperSlidesWrapper.length;
 
-    for (let i = 0; i <= delta + 1; i++) {
+    for (let i = 0; i <= delta; i++) {
       for (let j = 0; j < swipersLength; j++) {
         const elm = swiperSlidesWrapper[j];
 
         const clone = elm.cloneNode(true);
-
-        swiperWrapper.appendChild(clone);
+        if (dir === "left") {
+          swiperWrapper.appendChild(clone);
+        }
+        if (dir === "right") {
+          swiperWrapper.prepend(clone);
+        }
       }
     }
 
