@@ -36,6 +36,12 @@ First, you need to create the HTML structure for your marquee slider. Here's an 
 - `marquee-slider-wrapper` and `marquee-slider-slides-wrapper` classes are mandatory.
 - Each slide should have the class `marquee-slider-slide`.
 
+In addition you need to add the style:
+
+```
+<link rel="stylesheet" href="./marquee-slider.css">
+```
+
 ### JavaScript Initialization
 
 Once you have set up the HTML structure, you can initialize the marquee slider using the `initMarqueeSlider` function. Here's an example:
