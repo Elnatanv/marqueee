@@ -17,7 +17,8 @@ const { initMarqueeeSlider } from 'marqueee'
 ```
 
 OR to use it as vanilla js:
-To use the Marquee Slider Library, you need to include the JavaScript file in your project. You can download it from [here](example.com/marquee-slider.js) and include it in your HTML file like this:
+
+You need to include the JavaScript file in your project. You can download it from [here](example.com/marquee-slider.js) and include it in your HTML file like this:
 
 ```
 <script src="marquee-slider.js"></script>
