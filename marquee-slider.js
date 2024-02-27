@@ -20,7 +20,7 @@
     </div>
   </div>
  */
-export const initMarqueeeSlider = (id, options = {}) => {
+const initMarqueeeSlider = (id, options = {}) => {
   const { stopOnHover = false } = options;
   const swiper = document.getElementById(id);
   const swiperWrapperInit = swiper.querySelector(".marquee-slider-wrapper");
@@ -48,16 +48,16 @@ export const initMarqueeeSlider = (id, options = {}) => {
 
     // Define keyframes for the animation
     const keyframes = `
-     @keyframes ${id} {
-       0% {
-         transform: translateX(0);
+       @keyframes ${id} {
+         0% {
+           transform: translateX(0);
+         }
+         100% {
+           transform: translateX(-${width + space}px);
+         }
        }
-       100% {
-         transform: translateX(-${width + space}px);
-       }
-     }
-     
-   `;
+       
+     `;
 
     // swiper width and check how many can fit inside
     let delta = Math.ceil(swiper.clientWidth / width);
