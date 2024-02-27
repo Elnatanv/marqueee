@@ -45,7 +45,7 @@ export const initMarqueeeSlider = (id, options = {}) => {
 
   const clonedWrapper = swiperWrapperInit.cloneNode(true);
   const init = (swiperWrapper) => {
-    const width = swiperSlidesWrapper[0].offsetWidth;
+    const width = swiperSlidesWrapper[0].clientWidth;
 
     // Define keyframes for the animation
     const keyframes = `
