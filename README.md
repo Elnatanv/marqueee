@@ -92,8 +92,10 @@ The `initMarqueeSlider` function takes two arguments:
 
 1. The `id` of the top parent div.
 2. An options object:
-   - stopOnHover: boolen (default true) - will allow/prevent the user to pause the marquee on mouse hover
-   - allowPointEvent: boolean (default true) - will allow/prevent the user to have point events on marquee. Will overwrite stopOnHover option!
-   - dir: string (default left) - will allow the user to change the marquee animation direction. 'left' | 'right'
+   | Option | Default | Description |
+   |-----------------|---------|------------------------------------------------------------------------|
+   | stopOnHover | true | Allows/prevents the user to pause the marquee on mouse hover. |
+   | allowPointEvent| true | Allows/prevents the user to have point events on marquee. Will overwrite stopOnHover option! |
+   | dir | left | Allows the user to change the marquee animation direction. 'left' | 'right' |
 
 That's it! You've successfully implemented the Marquee Slider Library on your website.
