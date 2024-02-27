@@ -10,12 +10,12 @@
  * - - - 
  * //HTML / JSX (change class to className if using React):
   <div id="marqueee-slider" data-speed="5" data-space="10">
-    <div class="marquee-slider-wrapper">
-      <div class="marquee-slider-slides-wrapper">
-        <div class="marquee-slider-slide">slide 1</div>
-        <div class="marquee-slider-slide">slide 2</div>
-        <div class="marquee-slider-slide">slide 3</div>
-        <div class="marquee-slider-slide">slide 4</div>
+    <div className="marquee-slider-wrapper">
+      <div className="marquee-slider-slides-wrapper">
+        <div className="marquee-slider-slide">slide 1</div>
+        <div className="marquee-slider-slide">slide 2</div>
+        <div className="marquee-slider-slide">slide 3</div>
+        <div className="marquee-slider-slide">slide 4</div>
       </div>
     </div>
   </div>
