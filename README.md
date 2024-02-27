@@ -4,6 +4,19 @@ Welcome to the Marquee Slider Library! This library allows you to easily create 
 
 ## Installation
 
+NPM install
+
+```
+npm i marqueee
+```
+
+and import:
+
+```
+const { initMarqueeeSlider } from 'marqueee'
+```
+
+OR to use it as vanilla js:
 To use the Marquee Slider Library, you need to include the JavaScript file in your project. You can download it from [here](example.com/marquee-slider.js) and include it in your HTML file like this:
 
 ```
@@ -15,6 +28,7 @@ To use the Marquee Slider Library, you need to include the JavaScript file in yo
 ### HTML Structure
 
 First, you need to create the HTML structure for your marquee slider. Here's an example:
+(If using in JSX - change class to className)
 
 ```
 <div id="marquee-slider" data-speed="5" data-space="10">
@@ -37,6 +51,14 @@ First, you need to create the HTML structure for your marquee slider. Here's an 
 - Each slide should have the class `marquee-slider-slide`.
 
 In addition you need to add the style:
+
+JSX :
+
+```
+import "marqueee/style.css"
+```
+
+HTML:
 
 ```
 <link rel="stylesheet" href="./marquee-slider.css">
