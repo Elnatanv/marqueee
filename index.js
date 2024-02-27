@@ -5,67 +5,69 @@
  * @param {boolean} options.stopOnHover - Whether to stop the slider on hover (default: false).
  * @example
  * // Initialize the Carthagos Slider with ID "mySlider"
- * initCarthagosSlider("mySlider", { stopOnHover: true });
+ * initMarqueeeSlider("mySlider", { stopOnHover: true });
  */
-export const initCarthagosSlider = (id, options = {}) => {
+const initMarqueeeSlider = (id, options = {}) => {
   const { stopOnHover = false } = options;
   const swiper = document.getElementById(id);
-  const swiperWrapper = swiper.querySelector(".slider-wrapper");
-  const swiperSlide = swiperWrapper.getElementsByClassName("slider-slide");
-
-  const space = parseFloat(swiper.getAttribute("data-space"));
+  const swiperWrapperInit = swiper.querySelector(".marquee-slider-wrapper");
+  const swiperSlidesWrapper = swiperWrapperInit.getElementsByClassName(
+    "marquee-slider-slides-wrapper"
+  );
+  const space = parseFloat(swiper.getAttribute("data-space")) || 10;
   const prefix = swiper.getAttribute("data-prefix") || "px";
-  const speed = parseFloat(swiper.getAttribute("data-speed"));
 
-  const spaceBetween = { value: space, prefix: prefix };
-  //for resize
-  const clonedWrapper = swiperWrapper.cloneNode(true);
-
+  const initStyle = () => {
+    swiper.style.overflow = "hidden";
+    //animate
+    const spaceBetween = { value: space, prefix: prefix };
+    swiperSlidesWrapper[0].style.gap = `0 ${spaceBetween.value}${spaceBetween.prefix}`;
+    swiperSlidesWrapper[0].style.margin = `0 ${spaceBetween.value / 2}${
+      spaceBetween.prefix
+    }`;
+  };
+  initStyle();
+  const clonedWrapper = swiperWrapperInit.cloneNode(true);
   const init = (swiperWrapper) => {
-    // get the wrppaer width + space between * slides
-    const totalSlideWidth = spaceBetween.value * swiperSlide.length;
-    const width = swiperWrapper.clientWidth + totalSlideWidth;
+    const speed = parseFloat(swiper.getAttribute("data-speed"));
 
-    console.log("widtg", width);
+    const width = swiperSlidesWrapper[0].offsetWidth;
+    console.log(width, "width");
+    // Define keyframes for the animation
+    const keyframes = `
+     @keyframes ${id} {
+       0% {
+         transform: translateX(0);
+       }
+       100% {
+         transform: translateX(-${width + space}px);
+       }
+     }
+     
+   `;
+
     // swiper width and check how many can fit inside
     let delta = Math.ceil(swiper.clientWidth / width) * 2;
     if (delta < 1) {
       delta = 1;
     }
-    let swipersLength = swiperSlide.length;
+    let swipersLength = swiperSlidesWrapper.length;
     // duplicate
     for (let i = 0; i < delta; i++) {
       for (let j = 0; j < swipersLength; j++) {
-        const elm = swiperSlide[j];
+        const elm = swiperSlidesWrapper[j];
+
         const clone = elm.cloneNode(true); // Create a clone of the slide element
+
         swiperWrapper.appendChild(clone);
       }
     }
 
-    //animate
-    swiperWrapper.style.gap = `0 ${spaceBetween.value}${spaceBetween.prefix}`;
-    // Set the width of the swiper wrapper to fit all duplicated slides
-    swiperWrapper.style.width = `${width * delta}px`;
-
     // Animate the movement to the left
     const animationDuration = speed; // Adjust this value to control the animation speed
-    const slideWidth = swiperSlide[0].offsetWidth + spaceBetween.value;
 
     // Apply CSS animation to the swiper wrapper
     swiperWrapper.style.animation = `${id} ${animationDuration}s linear infinite`;
-
-    // Define keyframes for the animation
-    const keyframes = `
-        @keyframes ${id} {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-${slideWidth}px);
-          }
-        }
-        
-      `;
 
     // Inject keyframes into a style element
     const styleElement = document.createElement("style");
@@ -83,12 +85,11 @@ export const initCarthagosSlider = (id, options = {}) => {
     }
     // Reset the position when animation completes
     swiperWrapper.addEventListener("animationiteration", () => {
-      swiperWrapper.appendChild(swiperWrapper.firstElementChild);
       swiperWrapper.style.transform = "translateX(0)";
     });
   };
 
-  init(swiperWrapper);
+  init(swiperWrapperInit);
 
   window.addEventListener("resize", init(clonedWrapper));
 };
