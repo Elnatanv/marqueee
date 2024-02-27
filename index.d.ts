@@ -17,5 +17,5 @@ declare module "marqueeeSlider" {
     options?: MarqueeeSliderOptions
   ): MarqueeeSliderInstance;
 
-  export = initMarqueeeSlider;
+  export = marqueeeSlider;
 }
