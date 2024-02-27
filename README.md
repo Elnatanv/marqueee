@@ -18,7 +18,9 @@ const { initMarqueeeSlider } from 'marqueee'
 
 OR to use it as vanilla js:
 
-You need to include the JavaScript file in your project. you can get the file [from here](https://raw.githubusercontent.com/Elnatanv/marqueee/main/marquee-slider.js)
+You need to include the JavaScript file in your project.
+
+you can get the JS file [from here](https://raw.githubusercontent.com/Elnatanv/marqueee/main/marquee-slider.js)
 
 ```
 <script src="marquee-slider.js"></script>
@@ -63,6 +65,8 @@ import "marqueee/style.css"
 ```
 
 HTML:
+
+you can get the css file [from here](https://raw.githubusercontent.com/Elnatanv/marqueee/main/marquee-slider.js)
 
 ```
 <link rel="stylesheet" href="./marquee-slider.css">
