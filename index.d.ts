@@ -1,6 +1,6 @@
 // index.d.ts
 
-declare module "carthagosSlider" {
+declare module "marqueeeSlider" {
   interface MarqueeeSliderOptions {
     stopOnHover?: boolean;
     // Add more options and their types as needed
