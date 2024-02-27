@@ -4,6 +4,7 @@
   "description": "Marquee library.",
   "main": "marqueee.js",
   "types": "index.d.ts",
+  "module": "marqueee.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
