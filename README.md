@@ -2,6 +2,10 @@
 
 Welcome to the Marquee Slider Library! This library allows you to easily create a beautiful marquee slider for your website. Below are instructions on how to implement and use the library.
 
+## Demos:
+
+[React.js](https://codesandbox.io/p/sandbox/marquee-react-demo-cgphsd)
+
 ## Installation
 
 NPM install
@@ -16,9 +20,11 @@ and import:
 const { initMarqueeeSlider } from 'marqueee'
 ```
 
-OR to use it as vanilla js:
+---
 
-You need to include the JavaScript file in your project.
+using it as vanilla js:
+
+You need to include the JavaScript file in your project (above `</body>`).
 
 you can get the JS file [from here](https://raw.githubusercontent.com/Elnatanv/marqueee/main/marquee-slider.js)
 
@@ -80,7 +86,7 @@ React:
 
 ```
 useEffect(()=>{
-    initMarqueeSlider("marquee-slider", {stopOnHover:true, dir:'left', allowPointEvent:true})
+    initMarqueeSlider("marquee-slider", {stopOnHover:true, allowPointEvent:true})
 },[])
 ```
 
@@ -88,7 +94,7 @@ Vanilla JS:
 
 ```
 <script>
-    initMarqueeSlider("marquee-slider", {stopOnHover:true, dir:'left', allowPointEvent:true});
+    initMarqueeSlider("marquee-slider", {stopOnHover:true, allowPointEvent:true});
 </script>
 ```
 
@@ -100,6 +106,5 @@ The `initMarqueeSlider` function takes two arguments:
    |-----------------|---------|------------------------------------------------------------------------|
    | stopOnHover | true | Allows/prevents the user to pause the marquee on mouse hover. |
    | allowPointEvent| true | Allows/prevents the user to have pointer events on marquee. Will overwrite stopOnHover option! |
-   | dir | left | Allows the user to change the marquee animation direction. 'left' or 'right' |
 
 That's it! You've successfully implemented the Marquee Slider Library on your website.

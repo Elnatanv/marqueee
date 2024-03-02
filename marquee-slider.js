@@ -26,6 +26,9 @@ const initMarqueeeSlider = (id, options = {}) => {
   const swiperSlidesWrapper = swiperWrapperInit.getElementsByClassName(
     "marquee-slider-slides-wrapper"
   );
+  const sliders = swiperSlidesWrapper[0].getElementsByClassName(
+    "marquee-slider-slide"
+  );
 
   const { stopOnHover = false, dir = "left", allowPointEvent = true } = options;
 
