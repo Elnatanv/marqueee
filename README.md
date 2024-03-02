@@ -2,11 +2,13 @@
 
 Welcome to the Marquee Slider Library! This library allows you to easily create a beautiful marquee slider for your website. Below are instructions on how to implement and use the library.
 
-## Demos:
+**Demos:**
 
 [React.js](https://codesandbox.io/p/sandbox/marquee-react-demo-cgphsd)
 
 ## Installation
+
+### React.js:
 
 NPM install
 
@@ -22,7 +24,7 @@ const { initMarqueeeSlider } from 'marqueee'
 
 ---
 
-using it as vanilla js:
+### Vanilla js:
 
 You need to include the JavaScript file in your project (above `</body>`).
 
@@ -38,7 +40,7 @@ you can get the JS file [from here](https://raw.githubusercontent.com/Elnatanv/m
 
 First, you need to create the HTML structure for your marquee slider. Here's an example:
 
-(If using in JSX - change class to className)
+**(If using in JSX - change class to className)**
 
 ```
 <div id="marquee-slider" data-speed="5" data-space="10">
@@ -53,16 +55,18 @@ First, you need to create the HTML structure for your marquee slider. Here's an 
 </div>
 ```
 
-Important:
+**Important:**
 
 - The `id` attribute must be set for the top parent `div`.
 - Two additional attributes are required: `data-speed` and `data-space`.
   - `data-speed`: Time taken for the animation to complete.
   - `data-space`: Space between slides.
 - `marquee-slider-wrapper` and `marquee-slider-slides-wrapper` classes are mandatory.
-- Each slide should have the class `marquee-slider-slide`.
+- Each slide must have the class `marquee-slider-slide`.
 
-In addition you need to add the style:
+---
+
+**CSS import**
 
 React :
 
@@ -78,11 +82,13 @@ you can get the css file [from here](https://raw.githubusercontent.com/Elnatanv/
 <link rel="stylesheet" href="./marquee-slider.css">
 ```
 
+---
+
 ### JavaScript Initialization
 
 Once you have set up the HTML structure, you can initialize the marquee slider using the `initMarqueeSlider` function. Here's an example:
 
-React:
+### React:
 
 ```
 useEffect(()=>{
@@ -90,7 +96,7 @@ useEffect(()=>{
 },[])
 ```
 
-Vanilla JS:
+### Vanilla JS:
 
 ```
 <script>
