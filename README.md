@@ -109,7 +109,7 @@ The `initMarqueeSlider` function takes two arguments:
 1. The `id` of the top parent div.
 2. An options object:
    | Option | Type | Default | Description |
-   |-----------------|---------|------------------------------------------------------------------------|
+   |-----------------|---------|---------|------------------------------------------------------------------------|
    | stopOnHover | Boolean | false | Allows/prevents the user to pause the marquee on mouse hover. |
    | allowPointEvent | Boolean | false | Allows/prevents the user to have pointer events on marquee. Will overwrite stopOnHover option! |
 
