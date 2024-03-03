@@ -1,6 +1,6 @@
 {
   "name": "marqueee",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "Marquee library.",
   "main": "index.js",
   "module": "index.esm.js",

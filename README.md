@@ -8,6 +8,8 @@ Welcome to the Marquee Slider Library! This library allows you to easily create 
 
 [React.js - with types](https://codesandbox.io/p/sandbox/marqueee-demo-typescript-nw4rtg)
 
+[Vanilla JS](https://codesandbox.io/p/sandbox/marqueee-demo-vanillajs-n889ty)
+
 ## Installation
 
 ### React.js:
