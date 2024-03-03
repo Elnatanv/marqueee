@@ -1,11 +1,11 @@
-// types.d.ts
+declare function initMarqueeeSlider(
+  id: string,
+  options?: MarqueeSliderOptions
+): void;
 
 interface MarqueeSliderOptions {
   stopOnHover?: boolean;
   allowPointEvent?: boolean;
 }
 
-declare function initMarqueeeSlider(
-  id: string,
-  options?: MarqueeSliderOptions
-): void;
+export { initMarqueeeSlider, MarqueeSliderOptions };

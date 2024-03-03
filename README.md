@@ -14,6 +14,8 @@ NPM install
 
 ```
 npm i marqueee
+# or
+yarn add marqueee
 ```
 
 and import:
