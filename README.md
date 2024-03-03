@@ -145,6 +145,7 @@ That's it! You've successfully implemented the Marquee Slider Library on your we
 
 ## Todo
 
-- [ X ] Add types support.
+- [x] Add types support.
 - [ ] Add direction to the marquee.
-- [ X ] Add styling instructions. (In progress)
+- [x] Add styling instructions. (In progress)
+- [ ] Add instruction - how to use with multiple marquees in the same page.
