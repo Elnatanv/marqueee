@@ -1,49 +1,17 @@
-/**
- * Initializes the Carthagos Slider.
- * @param {string} id - The ID of the slider element.
- * @param {Object} options - The options for the slider.
- * @param {boolean} options.stopOnHover - Whether to stop the slider on hover (default: false).
- * @example
- * //JS:
- * // Will go inside a useEffect or componentDidMount
- * initMarqueeeSlider("mySlider", { stopOnHover: true });
- * - - - 
- * //HTML / JSX (change class to className if using React):
-  <div id="marqueee-slider" data-speed="5" data-space="10">
-    <div class="marquee-slider-wrapper">
-      <div class="marquee-slider-slides-wrapper">
-        <div class="marquee-slider-slide">slide 1</div>
-        <div class="marquee-slider-slide">slide 2</div>
-        <div class="marquee-slider-slide">slide 3</div>
-        <div class="marquee-slider-slide">slide 4</div>
-      </div>
-    </div>
-  </div>
- */
 const initMarqueeeSlider = (id, options = {}) => {
   const swiper = document.getElementById(id);
   const swiperWrapperInit = swiper.querySelector(".marquee-slider-wrapper");
   const swiperSlidesWrapper = swiperWrapperInit.getElementsByClassName(
     "marquee-slider-slides-wrapper"
   );
-  const sliders = swiperSlidesWrapper[0].getElementsByClassName(
-    "marquee-slider-slide"
-  );
 
-  const { stopOnHover = false, dir = "left", allowPointEvent = true } = options;
-
-  if (dir === "right") {
-    swiper.setAttribute("dir", "rtl");
-  }
-  if (dir === "left") {
-    swiper.setAttribute("dir", "ltr");
-  }
+  const { stopOnHover = false, allowPointEvent = true } = options;
 
   if (!allowPointEvent) {
     swiper.style.pointerEvents = "none";
   }
 
-  const speed = parseFloat(swiper.getAttribute("data-speed"));
+  const speed = parseFloat(swiper.getAttribute("data-speed")) || 5;
 
   const space = parseFloat(swiper.getAttribute("data-space")) || 10;
   const prefix = swiper.getAttribute("data-prefix") || "px";
@@ -69,15 +37,12 @@ const initMarqueeeSlider = (id, options = {}) => {
            transform: translateX(0);
          }
          100% {
-           transform: translateX(${dir === "left" ? "-" : "+"}${
-      width + space
-    }px);
+           transform: translateX(${width + space}px);
          }
        }
        
      `;
 
-    // swiper width and check how many can fit inside
     let delta = Math.ceil(swiper.offsetWidth / width);
     if (delta < 1) {
       delta = 1;
@@ -90,12 +55,7 @@ const initMarqueeeSlider = (id, options = {}) => {
         const elm = swiperSlidesWrapper[j];
 
         const clone = elm.cloneNode(true);
-        if (dir === "left") {
-          swiperWrapper.appendChild(clone);
-        }
-        if (dir === "right") {
-          swiperWrapper.prepend(clone);
-        }
+        swiperWrapper.appendChild(clone);
       }
     }
 
