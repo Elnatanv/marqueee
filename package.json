@@ -1,17 +1,26 @@
 {
   "name": "marqueee",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "Marquee library.",
   "main": "index.js",
   "module": "index.esm.js",
-  
+  "types": "index.d.ts",
+  "files": [
+  "index.js",
+  "index.esm.js",
+  "types.d.ts",
+  "style.css"
+],
 	
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Elnatanv/marqueee.git"
   },
   "keywords": [
-    "marquee"
+    "marquee",
+    "marqueee",
+    "marquee js",
+    "marquee library"
   ],
   "author": "ElnatanV",
   "license": "MIT",

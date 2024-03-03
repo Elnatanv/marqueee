@@ -114,3 +114,9 @@ The `initMarqueeSlider` function takes two arguments:
    | allowPointEvent | Boolean | false | Allows/prevents the user to have pointer events on marquee. Will overwrite stopOnHover option! |
 
 That's it! You've successfully implemented the Marquee Slider Library on your website.
+
+## Todo
+
+- [ ] Add types support.
+- [ ] Add direction to the marquee.
+- [ ] Add styling instructions.
