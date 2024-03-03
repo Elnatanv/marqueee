@@ -37,7 +37,7 @@ const initMarqueeeSlider = (id, options = {}) => {
            transform: translateX(0);
          }
          100% {
-           transform: translateX(${width + space}px);
+           transform: translateX(-${width + space}px);
          }
        }
        

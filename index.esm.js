@@ -1,4 +1,4 @@
-const initMarqueeeSlider = (id, options = {}) => {
+export const initMarqueeeSlider = (id, options = {}) => {
   const swiper = document.getElementById(id);
   const swiperWrapperInit = swiper.querySelector(".marquee-slider-wrapper");
   const swiperSlidesWrapper = swiperWrapperInit.getElementsByClassName(
@@ -37,7 +37,7 @@ const initMarqueeeSlider = (id, options = {}) => {
            transform: translateX(0);
          }
          100% {
-           transform: translateX(${width + space}px);
+           transform: translateX(-${width + space}px);
          }
        }
        

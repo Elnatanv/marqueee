@@ -6,6 +6,8 @@ Welcome to the Marquee Slider Library! This library allows you to easily create 
 
 [React.js](https://codesandbox.io/p/sandbox/marquee-react-demo-cgphsd)
 
+[React.js - with types](https://codesandbox.io/p/sandbox/marqueee-demo-typescript-nw4rtg)
+
 ## Installation
 
 ### React.js:
@@ -119,6 +121,6 @@ That's it! You've successfully implemented the Marquee Slider Library on your we
 
 ## Todo
 
-- [ ] Add types support.
+- [ X ] Add types support.
 - [ ] Add direction to the marquee.
 - [ ] Add styling instructions.
