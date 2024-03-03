@@ -28,10 +28,10 @@ const { initMarqueeeSlider } from 'marqueee'
 
 You need to include the JavaScript file in your project (above `</body>`).
 
-you can get the JS file [from here](https://raw.githubusercontent.com/Elnatanv/marqueee/main/marquee-slider.js)
+you can get the JS file [from here](https://cdn.jsdelivr.net/npm/marqueee@1.3.1/marquee-slider.js)
 
 ```
-<script src="marquee-slider.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marqueee@1.3.1/marquee-slider.js"></script>
 ```
 
 ## Usage
@@ -76,10 +76,10 @@ import "marqueee/style.css"
 
 HTML:
 
-you can get the css file [from here](https://raw.githubusercontent.com/Elnatanv/marqueee/main/marquee-slider.js)
+you can get the css file [from here](https://cdn.jsdelivr.net/npm/marqueee@1.3.1/style.css)
 
 ```
-<link rel="stylesheet" href="./marquee-slider.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/marqueee@1.3.1/style.css">
 ```
 
 ---
