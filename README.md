@@ -26,6 +26,12 @@ and import:
 const { initMarqueeeSlider } from 'marqueee'
 ```
 
+**Typescript:**
+
+```
+import { initMarqueeeSlider, MarqueeSliderOptions } from "marqueee";
+```
+
 ---
 
 ### Vanilla js:
@@ -68,6 +74,12 @@ First, you need to create the HTML structure for your marquee slider. Here's an 
 - `marquee-slider-wrapper` and `marquee-slider-slides-wrapper` classes are mandatory.
 - Each slide must have the class `marquee-slider-slide`.
 
+**How it works:**
+
+- The marquee width will be defined by the parent div `(id="marquee-slider")`
+- Each slide can take anything as child.
+- Each slide can be styled how ever you want. you can change the width, height, bg color, etc..
+
 ---
 
 **CSS import**
@@ -100,6 +112,18 @@ useEffect(()=>{
 },[])
 ```
 
+**Typescript:**
+
+```
+useEffect(() => {
+    const options: MarqueeSliderOptions = {
+      stopOnHover: true,
+      allowPointEvent: false,
+    };
+    initMarqueeeSlider("marquee-slider", options);
+  }, []);
+```
+
 ### Vanilla JS:
 
 ```
@@ -123,4 +147,4 @@ That's it! You've successfully implemented the Marquee Slider Library on your we
 
 - [ X ] Add types support.
 - [ ] Add direction to the marquee.
-- [ ] Add styling instructions.
+- [ X ] Add styling instructions. (In progress)
