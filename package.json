@@ -1,6 +1,6 @@
 {
   "name": "marqueee",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "description": "Marquee library.",
   "main": "index.js",
   "module": "index.esm.js",
@@ -10,7 +10,8 @@
   "index.esm.js",
   "types.d.ts",
   "index.d.ts",
-  "style.css"
+  "style.css",
+  "marquee-slider.js"
 ],
 	
   "repository": {
