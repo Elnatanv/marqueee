@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Demo</title>
+</head>
+<body>
+    <div id="marqueee-slider" data-speed="5" data-space="10">
+        <div class="marquee-slider-wrapper">
+            <div class="marquee-slider-slides-wrapper">
+                <div class="marquee-slider-slide"><img width="200" src="https://picsum.photos/200" alt="slider image"/></div>
+                <div class="marquee-slider-slide"><img width="300" src="https://picsum.photos/300" alt="slider image"/></div>
+                <div class="marquee-slider-slide"><img width="400" src="https://picsum.photos/400" alt="slider image"/></div>
+                <div class="marquee-slider-slide"><img width="100" src="https://picsum.photos/100" alt="slider image"/></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./marquee-slider.js"></script>
+    <script>
+        initMarqueeeSlider("marqueee-slider", {stopOnHover:true, dir:'right', allowPointEvent:true})  
+    </script>
+</body>
+</html>

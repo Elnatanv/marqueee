@@ -5,7 +5,14 @@ export const initMarqueeeSlider = (id, options = {}) => {
     "marquee-slider-slides-wrapper"
   );
 
-  const { stopOnHover = false, allowPointEvent = true } = options;
+  const getDirOp = (dir) => {
+    if (dir === "right") return { sym: "+", axis: "X" };
+    if (dir === "left") return { sym: "-", axis: "X" };
+    if (dir === "up") return { sym: "-", axis: "Y" };
+    if (dir === "down") return { sym: "+", axis: "Y" };
+  };
+
+  const { stopOnHover = false, allowPointEvent = true, dir = "left" } = options;
 
   if (!allowPointEvent) {
     swiper.style.pointerEvents = "none";
@@ -29,15 +36,21 @@ export const initMarqueeeSlider = (id, options = {}) => {
   const clonedWrapper = swiperWrapperInit.cloneNode(true);
   const init = (swiperWrapper) => {
     const width = swiperSlidesWrapper[0].offsetWidth;
+    const height = swiperSlidesWrapper[0].offsetHeight;
 
-    // Define keyframes for the animation
+    if (dir === "right") {
+      swiperWrapper.style.left = `-${width + space}px`;
+    }
+
     const keyframes = `
        @keyframes ${id} {
          0% {
-           transform: translateX(0);
+           transform: translate${getDirOp(dir).axis}(0);
          }
          100% {
-           transform: translateX(-${width + space}px);
+           transform: translate${getDirOp(dir).axis}(${getDirOp(dir).sym}${
+      width + space
+    }px);
          }
        }
        
@@ -50,7 +63,7 @@ export const initMarqueeeSlider = (id, options = {}) => {
 
     let swipersLength = swiperSlidesWrapper.length;
 
-    for (let i = 0; i <= delta; i++) {
+    for (let i = 1; i <= delta; i++) {
       for (let j = 0; j < swipersLength; j++) {
         const elm = swiperSlidesWrapper[j];
 
@@ -69,7 +82,7 @@ export const initMarqueeeSlider = (id, options = {}) => {
 
     // Reset the position when animation completes
     swiperWrapper.addEventListener("animationiteration", () => {
-      swiperWrapper.style.transform = "translateX(0)";
+      swiperWrapper.style.transform = `translate${getDirOp(dir).axis}(0)`;
     });
 
     //options handling

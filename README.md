@@ -108,7 +108,7 @@ Once you have set up the HTML structure, you can initialize the marquee slider u
 
 ```
 useEffect(()=>{
-    initMarqueeSlider("marquee-slider", {stopOnHover:true, allowPointEvent:true})
+    initMarqueeSlider("marquee-slider", {stopOnHover:true, allowPointEvent:true, dir:'left'})
 },[])
 ```
 
@@ -128,7 +128,7 @@ useEffect(() => {
 
 ```
 <script>
-    initMarqueeSlider("marquee-slider", {stopOnHover:true, allowPointEvent:true});
+    initMarqueeSlider("marquee-slider", {stopOnHover:true, allowPointEvent:true, dir:'left'});
 </script>
 ```
 
@@ -140,12 +140,13 @@ The `initMarqueeSlider` function takes two arguments:
    |-----------------|---------|---------|------------------------------------------------------------------------|
    | stopOnHover | Boolean | false | Allows/prevents the user to pause the marquee on mouse hover. |
    | allowPointEvent | Boolean | false | Allows/prevents the user to have pointer events on marquee. Will overwrite stopOnHover option! |
+   | dir | String | 'left' | Marquee direction - left / right |
 
 That's it! You've successfully implemented the Marquee Slider Library on your website.
 
 ## Todo
 
 - [x] Add types support.
-- [ ] Add direction to the marquee.
+- [x] Add direction to the marquee. (In progress - supporting left and right only.)
 - [x] Add styling instructions. (In progress)
 - [ ] Add instruction - how to use with multiple marquees in the same page.

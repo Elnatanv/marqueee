@@ -1,6 +1,7 @@
 interface MarqueeSliderOptions {
   stopOnHover?: boolean;
   allowPointEvent?: boolean;
+  dir?: "right" | "left";
 }
 
 declare const initMarqueeeSlider: (
