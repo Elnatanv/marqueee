@@ -40,10 +40,10 @@ import { initMarqueeeSlider, MarqueeSliderOptions } from "marqueee";
 
 You need to include the JavaScript file in your project (above `</body>`).
 
-you can get the JS file [from here](https://cdn.jsdelivr.net/npm/marqueee@latest/marquee-slider.js) ( < 4KB)
+you can get the JS file [from here](https://cdn.jsdelivr.net/npm/marqueee@latest/marquee-slider.min.js) ( < 4KB)
 
 ```
-<script src="https://cdn.jsdelivr.net/npm/marqueee@latest/marquee-slider.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marqueee@latest/marquee-slider.min.js"></script>
 ```
 
 ## Usage
